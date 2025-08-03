@@ -1580,7 +1580,7 @@ nav a{
     height: 20rem;
     /* background-color: green; */
     position: absolute;
-    bottom: 7rem;
+    bottom: 6rem;
     
 }
 
@@ -1758,4 +1758,151 @@ nav a{
         left: 3rem;
     
     }    
+}
+
+
+
+/* *****************************************footer starts here******************************** */
+
+footer{
+    width: 100vw;
+    height: 40vh;
+    /* background-color: yellow; */
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+#the-actual-footer{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    height: 100%;
+    /* background-color: violet; */
+    display: flex;
+}
+
+#footer-logo{
+    height: 100%;
+    width: 30%;
+    /* background-color: lime; */
+    border-right: 3px solid black;
+    position: relative;
+}
+
+
+#footer-logo p{
+    font-size: 3.7rem;
+    font-family: 'Monument';
+    font-weight: bolder;
+    position: absolute;
+    right: 3rem;
+    top: 1.3rem;
+}
+
+#footer-logo p sup{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    position: absolute;
+    right: -2rem;
+}
+
+#footer-logo p::after{
+    content: 'model management';
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 3.5rem;
+    right: 0rem;
+    text-align: right;
+    width: 50%;
+    /* background-color: yellow; */
+}
+
+
+
+#footer-section-2{
+    height: 100%;
+    width: 20%;
+    /* background-color: rgb(0, 255, 255); */
+    border-right: 3px solid black;
+    display: flex;
+    justify-content: center;
+    padding-top:2rem;
+    font-size: 1.4rem;
+}
+
+#footer-section-3{
+    height: 100%;
+    width: 20%;
+    /* background-color: lightseagreen; */
+    border-right: 3px solid black;
+    display: flex;
+    justify-content: center;
+    padding-top:2rem;
+    font-size: 1.4rem;
+}
+
+#footer-section-4{
+    height: 100%;
+    width: 30%;
+    /* background-color: orangered; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer-section-4-top{
+    height: 32%;
+    display: flex;
+    justify-content: left;
+    padding-left: 2rem;
+    padding-top:2rem;
+    font-size: 1.4rem;
+    border-bottom: 3px solid black;
+}
+
+#footer-section-4-bottom{
+    height: 68%;
+    width: 100%;
+    /* background-color: blueviolet; */
+}
+
+
+.social-icons {
+  width:81%;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: start;
+  padding: 1rem;
+  /* background-color: palevioletred; */
+}
+
+.icon-circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #000000;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.icon-circle:hover {
+  background-color: #ccc;
+  transform: scale(1.1);
+}
+
+.copyright-text {
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-weight: 400;
+
 }
