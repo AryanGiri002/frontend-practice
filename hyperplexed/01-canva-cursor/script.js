@@ -19,7 +19,7 @@ const calcDistance = (prev,current) =>{
 window.onmousemove = (e) =>{
 
     let star = document.createElement('i')
-    star.className = 'fa-solid fa-star'
+    star.className = 'ri-shining-2-fill'
     let mouseX = e.clientX
     let mouseY = e.clientY
     star.style.top =`${mouseY}px` 
