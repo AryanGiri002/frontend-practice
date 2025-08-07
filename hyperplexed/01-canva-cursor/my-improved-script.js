@@ -78,7 +78,7 @@ const createGlow = (last , current) => {
 }
 
 const updateLastStar = position => {
-    last.starTimeStamp = new Date.getTime();
+    last.starTimeStamp = new Date().getTime();
     last.starPosition = position;
 }
 
