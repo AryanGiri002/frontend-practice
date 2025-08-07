@@ -17,8 +17,12 @@ let globalIndex = 0;
 
 window.onmousemove = e => {
     if (calcDistance(e.clientX, e.clientY) > 100) {
-        const lead = images[(globalIndex) % (images.length)]
+        const lead = images[(globalIndex) % (images.length)];
+        const tail = images[(globalIndex-5) % (images.length)];
         activate(lead, e.clientX, e.clientY)
         globalIndex++;
+        if(tail){
+            tail.dataset.status = 'inactive'
+        }
     }
 }
