@@ -1,0 +1,81 @@
+body {
+    background-color: #323437;
+    color: #E2B714; 
+    font-family: 'Roboto Mono', monospace, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+#typing-container {
+    width: 80%;
+    max-width: 900px;
+    /* background-color: orangered; */
+}
+
+#text-to-type {
+    /* background-color: orange; */
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    /* Allows text to wrap nicely , prevent any overflow*/
+    overflow-wrap: break-word; 
+}
+
+/* --- Character Styling --- */
+.char {
+    color: #646669; 
+    position: relative;
+}
+
+.char.correct {
+    color: #D1D0C5;
+}
+
+.char.incorrect {
+    color: #CA4754;
+}
+
+/* Special styling for incorrect spaces to make them visible */
+.char.incorrect.space {
+    text-decoration: underline;
+    text-decoration-color: #CA4754;
+}
+
+/* --- Cursor Styling --- */
+
+.char.cursor::before {
+    content: "|";
+    position: absolute;
+    font-size: 2rem;
+    left: -50%;
+    top: -25%;
+    color: #E2B714; 
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%{ opacity: 1; }
+    50% { opacity: 0; }
+    100%{ opacity: 1; }
+
+}
+
+/* --- Hidden Input Field --- */
+#typing-area {
+    /* This makes the input field invisible but still focusable and able to receive key presses. */
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
