@@ -1,0 +1,163 @@
+/* --- Plain Font --- */
+@font-face {
+  font-family: 'Plain';
+  font-weight: 300; /* Corresponds to 'light' */
+  font-style: normal;
+  src: url('./fonts/plain-light-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Plain';
+  font-weight: 400; /* Corresponds to 'regular' */
+  font-style: normal;
+  src: url('./fonts/plain-regular-webfont.ttf') format('truetype');
+}
+
+/* --- Silk Serif Font --- */
+/* Note: There seems to be a typo in your filename 'lighititalic'.
+   The path below matches the file as shown in your screenshot.
+   If you rename the file to 'lightitalic', you'll need to update the URL here. */
+@font-face {
+  font-family: 'Silk Serif';
+  font-weight: 300; /* Light */
+  font-style: italic;
+  src: url('./fonts/silkserif-lightititalic-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Silk Serif';
+  font-weight: 400; /* Regular */
+  font-style: italic;
+  src: url('./fonts/silkserif-regularitalic-webfont.ttf') format('truetype');
+}
+
+/* --- Other Fonts (Likely from a service like Google Fonts) --- */
+/* The filenames are obfuscated, so I've given them generic family names.
+   You might want to rename these to something more descriptive. */
+@font-face {
+  font-family: 'Imported Web Font 1';
+  src: url('./fonts/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Imported Web Font 2';
+  src: url('./fonts/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.ttf') format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    height: 100%;
+    width:100%;
+    color: white;
+}
+
+#main{
+    position: relative;
+}
+
+#loader{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #0b0b0b;
+    padding: 24vh 5vw;
+}
+
+#loader p {
+    font-size: 7rem;
+    font-weight: 400;
+    font-family: serif;
+    font-family: 'Plain';
+    line-height: 7.5rem;
+    letter-spacing: 1px;
+}
+
+.loader-lines{
+    height: fit-content;
+    overflow: hidden;
+}
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #151515;
+}
+
+/* ******************CSS for the counter in loader***************************** */
+
+#loader-line-1{
+    /* background-color: yellow; */
+    display: flex;
+}
+
+#loader-line-1-section-1{
+    padding-top: 0.4rem;
+    width: 22%;
+    font-size: 3rem;
+    font-family: 'Silk Serif';
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#loader-line-1-counter{
+    text-align: right;
+    /* background-color: aqua; */
+    width: 5.4rem;
+}
+
+
+/* ******************CSS for the font changer in loader***************************** */
+
+#loader-line-3{
+    display: flex;
+    /* background-color: aquamarine; */
+    align-items: center;
+    /* gap: 1.9rem; */
+    position: relative;
+
+}
+
+
+#loader-line-3-font-change-section{
+    height:8rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 69%;
+    /* background-color: yellow; */
+    font-size: 7rem;
+    transition: all 0.3s ease;
+}
+
+.change-font-theme-1{
+    font-family: 'Silk Serif';
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+.change-font-theme-1 span {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+.change-font-theme-2{
+    font-family: 'Plain';
+    color: white;
+}
+
+.change-font-theme-2 span {
+    color: white;
+    -webkit-text-stroke: 0; /* Explicitly remove the stroke */
+}
