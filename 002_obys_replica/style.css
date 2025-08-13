@@ -126,38 +126,62 @@ html , body {
     align-items: center;
     /* gap: 1.9rem; */
     position: relative;
+    overflow: hidden;
 
 }
 
 
 #loader-line-3-font-change-section{
+    padding-left: 0.8rem;
+    width: 19rem;
     height:8rem;
     display: flex;
     align-items: center;
     position: absolute;
-    left: 69%;
-    /* background-color: yellow; */
+    left: 68%;
+    /* top: 200%; */
+    /* background-color: palevioletred; */
     font-size: 7rem;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.change-font-theme-1{
-    font-family: 'Silk Serif';
-    -webkit-text-stroke: 2px white;
-    color: transparent;
-}
-
-.change-font-theme-1 span {
-    -webkit-text-stroke: 2px white;
-    color: transparent;
-}
-
-.change-font-theme-2{
+#loader-line-3-font-change-section span {
     font-family: 'Plain';
-    color: white;
+    -webkit-text-stroke: 1px #fff;
+    animation: font-cycle 2.2s linear infinite;
 }
 
-.change-font-theme-2 span {
-    color: white;
-    -webkit-text-stroke: 0; /* Explicitly remove the stroke */
+@keyframes font-cycle {
+    0% {
+        font-family: "Plain";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    48% {
+        font-family: "Plain";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    50% {
+        font-family: 'Silk Serif';
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
+    }
+
+    100% {
+        font-family: 'Silk Serif';
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 0;
+    }
 }
