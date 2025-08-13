@@ -23,6 +23,12 @@ gsap.from('#loader-line-1-counter-remaining-part',{
     duration:0.6
 })
 
+gsap.from('#loader-waiting-text p',{
+    opacity:0,
+    duration:1,
+    delay:0.95
+})
+
 
 // const nowText = document.querySelector('#loader-line-3-font-change-section');
 // gsap.set(nowText, { className: 'change-font-theme-2' });
@@ -102,7 +108,7 @@ const fxnID1 = setInterval(() => {
 
 
 let timeLine = gsap.timeline()
-timeLine.to('.loader-lines p , #loader-line-1-counter , #loader-line-1-counter-remaining-part , #loader-line-3-font-change-section',{
+timeLine.to('.loader-lines p , #loader-line-1-counter , #loader-line-1-counter-remaining-part , #loader-line-3-font-change-section , #loader-waiting-text p',{
     opacity:0,
     duration:0.8,
     delay:3.1
