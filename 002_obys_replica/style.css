@@ -73,11 +73,11 @@ html , body {
 }
 
 #loader p {
-    font-size: 7rem;
+    font-size: 7vw;
     font-weight: 400;
     font-family: serif;
     font-family: 'Plain';
-    line-height: 7.5rem;
+    line-height: 7.5vw;
     letter-spacing: 1px;
 }
 
@@ -100,21 +100,21 @@ html , body {
 }
 
 #loader-line-1-section-1{
-    padding-top: 0.4rem;
+    padding-top: 0.4vh;
     width: 22%;
-    font-size: 3rem;
+    font-size: 3vw;
     font-family: 'Silk Serif';
     /* background-color: red; */
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
+    gap: 1vw;
 }
 
 #loader-line-1-counter{
     text-align: right;
     /* background-color: aqua; */
-    width: 5.4rem;
+    width: 5.4vw;
 }
 
 
@@ -132,16 +132,16 @@ html , body {
 
 
 #loader-line-3-font-change-section{
-    padding-left: 0.8rem;
-    width: 19rem;
-    height:8rem;
+    padding-left: 4vw;
+    width: 22.3vw;
+    height:12vh;
     display: flex;
     align-items: center;
     position: absolute;
     left: 68%;
     /* top: 200%; */
     /* background-color: palevioletred; */
-    font-size: 7rem;
+    font-size: 7vw;
     transition: all 0.3s ease;
     overflow: hidden;
 }
@@ -157,7 +157,7 @@ html , body {
         font-family: "Plain";
         -webkit-text-stroke: 1px #fff;
         color: #fff;
-        font-weight: 500;
+        font-weight: 400;
         opacity: 1;
     }
 
@@ -165,14 +165,14 @@ html , body {
         font-family: "Plain";
         -webkit-text-stroke: 1px #fff;
         color: #fff;
-        font-weight: 500;
+        font-weight: 400;
         opacity: 0;
     }
 
     50% {
         font-family: 'Silk Serif';
         -webkit-text-stroke: 1px #fff;
-        font-weight: 500;
+        font-weight: 400;
         color: transparent;
         opacity: 1;
     }
@@ -180,26 +180,71 @@ html , body {
     100% {
         font-family: 'Silk Serif';
         -webkit-text-stroke: 1px #fff;
-        font-weight: 500;
+        font-weight: 400;
         color: transparent;
         opacity: 0;
     }
 }
 
 #loader-waiting-text {
-    margin-top: 4.5rem;
+    margin-top: 5vh;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
-    padding-left: 22rem;
+    padding-left: 22vw;
 }
 
 
 #loader-waiting-text p{
-    line-height: 1.2rem;
-    height: fit-content;
-    /* background-color: yellow; */
-    display: inline;
+    line-height: 1.8vh;
+    /* background-color: rgb(4, 58, 46); */
     font-family: 'Imported Web Font 2';
-    font-size: 1rem;
+    font-size: 1.4vh;
+}
+
+
+@media (max-width:640px) {
+    #loader{
+        padding: 38vh 5vw;
+    }
+
+    #loader-line-1{
+        /* background-color: rgb(156, 156, 30); */
+        display: flex;
+        flex-direction: column;
+    }
+
+    #loader-line-1-section-1{
+        padding-top: 0.4vh;
+        width: 25%;
+        font-size: 3.8vw;
+        font-family: 'Silk Serif';
+        /* background-color: red; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2vw;
+    }
+
+    #loader-waiting-text {
+        margin-top: 5vh;
+        /* background-color: rgba(255, 0, 0, 0.558); */
+        padding-left: 0vw;
+    }
+
+
+    #loader-waiting-text p{
+        line-height: 1.9vh;
+        font-family: 'Imported Web Font 2';
+        font-size: 1.5vh;
+    }
+
+    #loader-line-3-font-change-section{
+        padding-left: 4.2vw;
+        width: 23vw;
+        left: 69.5%;
+        /* background-color: rgba(216, 112, 147, 0.631); */
+
+    }
+    
 }

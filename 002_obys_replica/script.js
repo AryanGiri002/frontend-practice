@@ -119,6 +119,6 @@ timeLine.to('#loader',{
     duration:0.6,
     ease: 'power1.in'
 })
-timeline.to('#Loader',{
+timeLine.to('#loader',{
     display:'none'
 })
