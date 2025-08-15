@@ -111,9 +111,8 @@ let timeLine = gsap.timeline()
 timeLine.to('.loader-lines p , #loader-line-1-counter , #loader-line-1-counter-remaining-part , #loader-line-3-font-change-section , #loader-waiting-text p',{
     opacity:0,
     duration:0.8,
-    delay:3.1
+    delay:2.8
 })
-
 timeLine.to('#loader',{
     y:'-100%',
     duration:0.6,
@@ -121,4 +120,10 @@ timeLine.to('#loader',{
 })
 timeLine.to('#loader',{
     display:'none'
+})
+gsap.from('.hero-line',{
+    y:'100%',
+    stagger:0.1,
+    delay:3.6,
+    stagger:0.2
 })
