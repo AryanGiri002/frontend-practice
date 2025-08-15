@@ -907,7 +907,7 @@ nav a{
 
 
 
-/* ************************************ page 4 & page 6 starts from here ****************************** */
+/* ************************************ page 4 & page 7 starts from here ****************************** */
 
 #page-4, #page-7{
     width: 100vw;
@@ -926,6 +926,7 @@ nav a{
 #page-4-main-container img, #page-7-main-container img{
     width: 100%;
     object-fit: cover;
+    object-position: center center;
     height: 100%;
 }
 
@@ -1378,9 +1379,9 @@ nav a{
     font-weight: 300;
 }
 
-@media (max-width:1280px) {
+@media (max-width:1480px) {
     #page-8-right-bottom p:first-child{
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
     #page-8-right-bottom p:last-child{
         font-size: 1rem;
@@ -1389,9 +1390,20 @@ nav a{
 }
 
 
-@media (max-width:1024px) {
+@media (max-width:1227px) {
     #page-8-right-bottom p:first-child{
         font-size: 1.8rem;
+    }
+    #page-8-right-bottom p:last-child{
+        font-size: 0.9rem;
+    }
+    
+}
+
+
+@media (max-width:1103px) {
+    #page-8-right-bottom p:first-child{
+        font-size: 1.45rem;
     }
     #page-8-right-bottom p:last-child{
         font-size: 0.9rem;
@@ -1435,7 +1447,7 @@ nav a{
     }
 
     #page-8-right-bottom p:first-child{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     #page-8-right-bottom p:last-child{
         font-size: 0.9rem;
@@ -1445,7 +1457,7 @@ nav a{
 
 @media (max-width:758px) {
     #page-8-right-bottom p:first-child{
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -1465,18 +1477,18 @@ nav a{
     }
 
     #page-8-right-bottom p:first-child{
-        font-size: 1.2rem;
+        font-size: 0.95rem;
         font-weight: 900;
     }
     #page-8-right-bottom p:last-child{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     
 }
 
 @media (max-width:468px) {
     #page-8-right-bottom p:first-child{
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 900;
     }
     #page-8-right-bottom p:last-child{
@@ -1485,10 +1497,14 @@ nav a{
     
 }
 
+
 @media (max-width:412px) {
     #page-8-right-bottom p:first-child{
         font-size: 0.8rem;
         font-weight: 900;
+    }
+    #page-8-right-bottom p:last-child{
+        font-size: 0.58rem;
     }
 
     #page-8-right-bottom{
@@ -1588,7 +1604,7 @@ nav a{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
 
 
 }
