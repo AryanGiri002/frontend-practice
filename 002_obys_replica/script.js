@@ -127,3 +127,58 @@ gsap.from('.hero-line',{
     delay:3.6,
     stagger:0.2
 })
+
+
+
+const customCursor = document.querySelector('#custom-cursor');
+const loader = document.querySelector('#loader');
+const page1 = document.querySelector('#page1')
+
+window.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // Get the cursor's dimensions to center it perfectly
+    const cursorWidth = customCursor.offsetWidth;
+    const cursorHeight = customCursor.offsetHeight;
+
+    // Use the 'translate' property directly
+    // This positions the cursor's center under the mouse pointer
+    customCursor.style.translate = `${x - cursorWidth / 2}px ${y - cursorHeight / 2}px`;
+});
+
+
+page1.addEventListener('mouseenter', (e) => {
+    customCursor.style.display = 'block';
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // Get the cursor's dimensions to center it perfectly
+    const cursorWidth = customCursor.offsetWidth;
+    const cursorHeight = customCursor.offsetHeight;
+
+    // Use the 'translate' property directly
+    // This positions the cursor's center under the mouse pointer
+    customCursor.style.translate = `${x - (cursorWidth / 2)}px ${y - (cursorHeight / 2)}px`;
+
+});
+
+
+const links = document.querySelectorAll('svg , a'); 
+links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        customCursor.classList.add('hover-effect');
+    });
+        
+    // Remove hover effect when mouse leaves a link
+    link.addEventListener('mouseleave', () => {
+        customCursor.classList.remove('hover-effect');
+    });
+});
+
+
+Shery.makeMagnet(".magnet-target" /* Element to target.*/, {
+  //Parameters are optional.
+//   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//   duration: 1,
+});
