@@ -182,3 +182,42 @@ Shery.makeMagnet(".magnet-target" /* Element to target.*/, {
 //   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
 //   duration: 1,
 });
+
+
+const flag = document.querySelector('#flag');
+const flagTriggerAreas = document.querySelectorAll('.flagTrigggerArea');
+
+// gsap.set(flag, { opacity: 0, display: 'none' });
+
+flagTriggerAreas.forEach((area) => {
+    // Show the flag when the mouse enters the trigger area
+    area.addEventListener('mouseenter', () => {
+        gsap.to(flag, {
+            display: 'inline',
+            opacity: 1,
+            duration: 0.3 // A gentle fade-in
+        });
+    });
+
+    // Move the flag to follow the cursor's position
+    area.addEventListener('mousemove', (e) => {
+        gsap.set(flag, {
+            top: e.clientY,
+            left: e.clientX,
+            xPercent: -50, // center the flag on the cursor
+            yPercent: -50
+        });
+    });
+
+    // Hide the flag when the mouse leaves the trigger area
+    area.addEventListener('mouseleave', () => {
+        gsap.to(flag, {
+            opacity: 0,
+            duration: 0.2,
+            onComplete: () => {
+                // Set display to none after the animation completes
+                gsap.set(flag, { display: 'none' });
+            }
+        });
+    });
+});

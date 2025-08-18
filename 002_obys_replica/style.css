@@ -319,6 +319,7 @@ nav{
 }
 
 header{
+    width: 100vw;
     height: 8.325rem;
     padding: 50px 80px 60px 60px;
     /* position: fixed;
@@ -452,6 +453,9 @@ svg:hover{
 #actual-hero-section{
     width: 100%;
     height: fit-content;
+    position: relative;
+    z-index: 2; 
+    /* the relative and z-index is used for flag to appear */
     /* background-color: rgb(132, 132, 11); */
 }
 
@@ -461,6 +465,7 @@ svg:hover{
     /* background-color: rgb(155, 3, 3); */
     width: fit-content;
     padding-left: 14%;
+    overflow-x: hidden;
 }
 
 .hero-line{
@@ -481,9 +486,6 @@ svg:hover{
         padding-left: 0%;
     }
 
-    #actual-hero-section{
-        position: relative;
-    }
     #actual-hero-section::before{
         content: '01';
         position: absolute;
@@ -549,4 +551,52 @@ svg:hover{
     font-family: 'Silk Serif';
     font-size: 3.3vw;
     left: -10vw;
+}
+
+#flag {
+    width: 22vw;
+    position: fixed;
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+    z-index: 1; /* Set the base layer for the flag */
+} 
+
+
+#scroll-message-container {
+    height: 18px; 
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.scrolling-text-wrapper {
+    animation: scroll-down 1.8s linear 0.5s infinite ;
+}
+
+#scroll-message-container p {
+    font-family: 'Plain';
+    font-weight: 300;
+    font-size: 1vw;
+    padding-left: 4.2vw;
+    height: 18px; 
+    color: #8f8f8f  ;
+}
+
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-50%);
+    }30%{
+        transform:  translateY(0%);
+    }70%{
+        transform: translateY(0%);
+
+    }100% {
+        transform: translateY(100%);
+    }
 }
