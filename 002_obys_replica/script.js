@@ -221,3 +221,21 @@ flagTriggerAreas.forEach((area) => {
         });
     });
 });
+
+
+
+gsap.to("#nav-right",{
+    opacity:0,
+    y:'-5rem',
+    duration:1,
+    ease: "power3.in",
+    scrollTrigger:{
+        trigger:'#hero-container',
+        scoller:'body',
+        // markers:true,
+        start:"top -24rem",
+        end:'top -24.01rem',
+        scrub:1
+
+    }
+})

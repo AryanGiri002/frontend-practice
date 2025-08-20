@@ -322,10 +322,10 @@ header{
     width: 100vw;
     height: 8.325rem;
     padding: 50px 80px 60px 60px;
-    /* position: fixed;
+    position: fixed;
     top:0;
     left: 0;
-    width: 100%; */
+    /* width: 100%;  */
     /* background-color: rgb(69, 142, 117); */
 }
 
@@ -430,14 +430,14 @@ svg:hover{
 /* ************************************************ hero-section starts here ************************************************** */
 
 #hero-container{
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70%;
+    height: 90%;
     padding-left: 15%;
-    padding-top: 6.5rem;
-    /* background-color: aqua; */
+    padding-top: 13.5rem;
+    /* background-color: rgb(40, 131, 131); */
 }
 
 @media (max-width:768px){
@@ -599,4 +599,14 @@ svg:hover{
     }100% {
         transform: translateY(100%);
     }
+}
+
+
+
+/* ********************************* page2 ************************** */
+
+#page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: #151515;
 }
